@@ -1,3 +1,13 @@
+let map; 
+
+function initMap() {
+  const bogota = { lat: 4.711, lng: -74.0721 };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: bogota,
+    zoom: 13,
+  });
+}
+
 document.getElementById('buscar').addEventListener('click', function() {
     const ubicacion = document.getElementById('ubicacion').value;
  
@@ -81,4 +91,5 @@ document.getElementById('buscar').addEventListener('click', function() {
             resultadosDiv.appendChild(div);
         }
     });
+
  }
